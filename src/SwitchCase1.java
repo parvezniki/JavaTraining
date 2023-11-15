@@ -4,7 +4,7 @@ public class SwitchCase1 {
     public static void main(String []args) {
         int n;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a value: ");
+        System.out.print("Enter a value: ");
         n = sc.nextInt();
 
             switch(n)  // ==
@@ -16,7 +16,7 @@ public class SwitchCase1 {
                 case 5: System.out.println("THURSDAY"); break;
                 case 6: System.out.println("FRIDAY"); break;
                 case 7: System.out.println("SATURDAY"); break;
-                default: System.out.println("Invalid Input"); break;
+                default: System.out.println("Invalid Input");
             }
 
 

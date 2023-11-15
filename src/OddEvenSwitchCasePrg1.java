@@ -7,7 +7,7 @@ public class OddEvenSwitchCasePrg1 {
         System.out.print("Enter a value: ");
         n = sc.nextInt();
 
-            switch( n%2 ) {
+            switch( n%2 ) {  // == and !=
                 case 1: System.out.println(n + " is an Odd Number"); break;
                 case 0: System.out.println(n + " is an Even Number"); break;
             }
