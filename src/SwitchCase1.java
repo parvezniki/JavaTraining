@@ -19,8 +19,5 @@ public class SwitchCase1 {
                 default: System.out.println("Invalid Input");
             }
 
-
-
-
     }
 }
