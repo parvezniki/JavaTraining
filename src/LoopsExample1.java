@@ -10,7 +10,8 @@ public class LoopsExample1 {
         i = 1; // initialization statement
         while(i<=n) { // condition statement
             System.out.println(i);
-            i = i + 1; // re-initialization statement
+            i = i + 1; // re-initialization statement           -> x++ , x-- {Post increment op, Post decrement}    --> +=n  -= *= /= %=
+                                                        //      -> ++x , --x {Pre increment op, Pre decrement}
         }
 
     }
