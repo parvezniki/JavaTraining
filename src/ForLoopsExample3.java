@@ -20,7 +20,7 @@ public class ForLoopsExample3 {
         System.out.println("************************************************");
     }
 
-    static void printMulTable(int p) { // Method or Function
+    static void printMulTable(int p) { // Method or Function or Behavior
 
         for(int i=1; i<=10; i++) {
             System.out.println(p+" x "+i+" = "+(p*i));

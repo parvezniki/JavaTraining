@@ -46,9 +46,9 @@ public class OOPsProg1 {
 
 class ClassA {
     // Properties of ClassA
-    private int a1,a2,a3;
+    private int a1,a2,a3; // Abstraction -> Hiding
 
-    // default constructor
+    //  constructor overloading
     ClassA() {
         System.out.println("I am default constructor ");
     }
@@ -74,3 +74,4 @@ class ClassA {
         System.out.println("a3 = "+a3);
     }
 }
+

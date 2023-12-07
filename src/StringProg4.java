@@ -7,7 +7,6 @@ public class StringProg4 {
         // Changing of Case
         System.out.println("Convert to Upper Case: "+s1.toUpperCase());
 
-
         System.out.println("This is how you print a \\ ");    //   \    --> \\
         System.out.println(" you can write \" anything here ");  //  \ -> Escape sequence char    \"
         System.out.println(" you can write \' anything here ");  //  \ -> Escape sequence char    \'
