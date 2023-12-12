@@ -1,9 +1,15 @@
 public class OOPsProg4 {
     public static void main(String []arg) {
         FamilyOne f1 = new FamilyOne();
+        f1.a = 10;
         f1.method2();
         FamilyOne f6 = new FamilyOne();
         f6.method2();
+
+
+        FamilyOne fam1 = new FamilyOne();
+        FamilyOne fam2 = new FamilyOne();
+
     }
 }
 
