@@ -18,6 +18,7 @@ class Dog implements Animal {
     public void makesSound() {
         System.out.println("I can Bark");
     }
+
 }
 
 class Cat implements Animal {
