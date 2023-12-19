@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class CreditCardProg {
     public static void main(String []args) {
 //        CreditCardPaymentInRs ccInr = new CreditCardPaymentInRs();
@@ -8,8 +9,11 @@ public class CreditCardProg {
 //        System.out.println("Before purchase Balance is Rs. :"+ccInr.getBalanceAmount());
 //        ccInr.performPayment(1000); // Method to perform paymnt operatoin
 //        System.out.println("After purchase Balance is Rs. :"+ccInr.getBalanceAmount());
+        Scanner sc = new Scanner(System.in);
+        String str1 = sc.next();
 
-        CreditCardPaymentInUSD ccUSD = new CreditCardPaymentInUSD();
+
+        CreditCardClass ccUSD = new CreditCardPaymentInUSD();
         ccUSD.setCcNumber("12345");
         ccUSD.setCvv(123);
         ccUSD.setBalanceAmount(100000);

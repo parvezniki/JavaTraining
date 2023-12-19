@@ -6,6 +6,7 @@ public class Inheritance2 {
 //        animal.sleep();
 //        animal.makesSound();
         //--------------------
+
         Cat1 cat = new Cat1();
         cat.setName("My Cat");
         cat.printName();
