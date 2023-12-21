@@ -26,7 +26,7 @@ public class LinkedListProgram1 {
         // Arrays: NOT POSSIBLE, becasue the array size is fixed
         colorsLinkedList.add(0,"Magenta");
         System.out.println(colorsArray);
-        System.out.println(colorsLinkedList); // overriddent method called toString() which will help to print the array List
+        System.out.println(colorsLinkedList); // overridden method called toString() which will help to print the array List
 
         // Remove an element from the array
         // Arrays: NOT POSSIBLE, becasue the array size is fixed
