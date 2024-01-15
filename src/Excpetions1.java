@@ -12,13 +12,28 @@ public class Excpetions1 {
             System.out.println("I am a safe statement, and I may not cause any exception");
             x = Integer.parseInt(str1);
             System.out.println(str2.substring(1,4));
-        } catch(Exception nfe) {
+        } catch(NumberFormatException nfe) {
             System.out.println("Hey, Correct your input.");
-        } finally {
+        } catch(NullPointerException nfe) {
+            System.out.println("Hey, Correct your input.");
+        } catch(ArrayIndexOutOfBoundsException aie) {
+            System.out.println("Array Index Out of bounds exception.");
+        } finally{
             System.out.println("Hey, I'm Finally Block");
             // Close the DB/Network connections
         }
 
+        try {
+            // Do DB/Network operations using the ablove open connection
+            System.out.println("I am a safe statement, and I may not cause any exception");
+            x = Integer.parseInt(str1);
+            System.out.println(str2.substring(1,4));
+        } catch(NumberFormatException |NullPointerException|ArrayIndexOutOfBoundsException ex) {
+            System.out.println("Hey, Correct your input.");
+        } finally{
+            System.out.println("Hey, I'm Finally Block");
+            // Close the DB/Network connections
+        }
         System.out.println(x);
         System.out.println("This is the ENd of the program");
     }
