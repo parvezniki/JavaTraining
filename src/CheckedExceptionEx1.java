@@ -50,6 +50,7 @@ public class CheckedExceptionEx1 {
             fr = new FileReader("D:\\PracticePrograms\\sampletextdoc1.txt");
         }catch(Exception fnfe) {
             System.out.println("Something went wrong during the opening of file.");
+            return;
         }
 
             int i;
@@ -66,5 +67,7 @@ public class CheckedExceptionEx1 {
         }catch(Exception fnfe) {
             System.out.println("Unable to close the file.");
         }
+
+        System.out.println("End of Method");
     }
 }
