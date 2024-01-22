@@ -28,18 +28,24 @@ public class FileHandingDirectoryTreeCreation {
 //        System.out.println(allFiles);
 
         String []allFilesListed = allFiles.split("\n");
+        File toBeCreated = null;
         for(String fileName:allFilesListed) {
             String path = absolutePathToTheDirectoryStructure + fileName;
             //System.out.println("Creating File/Folder: "+path);
+            toBeCreated = new File(path);
             if(fileName.endsWith(".txt")) {
                 // Create an Empty Text File
                 System.out.println("File Created : "+path);
-                crateFile(path);
+                toBeCreated.createNewFile();
 
             } else {
                 // Create a Folder / Directory
                 System.out.println("Folder Created : "+path);
-                crateDirectory(path);
+                if(fileName.contains("\\"))
+                    toBeCreated.mkdirs();
+                else
+                    toBeCreated.mkdir();
+
             }
         }
 
@@ -47,11 +53,13 @@ public class FileHandingDirectoryTreeCreation {
 
     }
 
-    public static void crateDirectory(String path) throws Exception {
+  /*  public static void crateDirectory(String path) throws Exception {
         File file = new File(path);
-        file.mkdir();
-
-    }
+        if(path.indexOf("\\")!=-1)
+            file.mkdirs();
+        else
+            file.mkdir();
+    }*/
     public static void crateFile(String path) throws  Exception {
         File file = new File(path);
         file.createNewFile();
