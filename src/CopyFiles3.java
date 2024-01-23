@@ -2,21 +2,25 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Scanner;
 
-// Read the contents of a given file and write to another file [ creating copy of the original ]
-public class CopyFiles {
+public class CopyFiles3 {
     public static void main(String []args) throws Exception {
-        String sourceFile,destinationFile;
-        long startTime = System.currentTimeMillis();
+        String sourceFile, destinationFile;
         sourceFile = "D:\\PracticePrograms\\Copy Practice\\betterday.mp3";
         destinationFile = "D:\\PracticePrograms\\Copy Practice\\betterdayCopy.mp3";
+        long startTime = System.currentTimeMillis();
         InputStream inputStream = new FileInputStream(sourceFile);
         OutputStream outputStream = new FileOutputStream(destinationFile);
-        int readBytes = -1;
-        while((readBytes = inputStream.read()) != -1) {
-            outputStream.write(readBytes);
+
+        final int BUFFER_SIZE = 262144; // 256 KB  -> 1/4 of 1MB
+        byte[] buffer = new byte[BUFFER_SIZE];
+        int numberOfBytesRead = 0;
+        while( (numberOfBytesRead = inputStream.read(buffer)) != -1 ) {
+            System.out.println(numberOfBytesRead+",");
+            outputStream.write(buffer,0,numberOfBytesRead);
         }
+        // 2.10 MB ->  1 2 3 4 5 6 7 8 (.10MB)
+
         inputStream.close();
         outputStream.close();
         long endTime = System.currentTimeMillis();
