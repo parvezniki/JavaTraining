@@ -12,26 +12,29 @@ class Counter {
 }
 
 class CounterThread extends Thread {
-    Counter cnt;
+    Counter cntObj;
     public CounterThread(Counter cnt) {
-        this.cnt = cnt;
+        cntObj = cnt;
     }
     @Override
     public void run() {
-        for(int i=0;i<10;i++) {
-            this.cnt.increaseCounter();
+        for(int i=0;i<10000;i++) {
+            cntObj.increaseCounter();
         }
     }
 }
-
+// synchronized -> you make a method "Thread safe"
 
 public class ThreadsProgram2 {
     public static void main(String []args) throws Exception {
-        Counter cnt1 = new Counter();
-        CounterThread ct1 = new CounterThread(cnt1);
-        CounterThread ct2 = new CounterThread(cnt1);
-        ct1.start();
-        ct2.start();
-        System.out.println(cnt1.getCounter());
+        Counter counterObj = new Counter();
+        Thread t1 = new CounterThread(counterObj); // NEW State
+        Thread t2 = new CounterThread(counterObj);
+
+        t1.start(); // Running State -> [[[[ Thread Lifecycle ]]]]
+        t2.start();
+        t1.join();
+        t2.join();
+        System.out.println(counterObj.getCounter());
     }
 }
